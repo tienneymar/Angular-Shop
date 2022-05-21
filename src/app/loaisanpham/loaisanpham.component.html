@@ -1,0 +1,222 @@
+<div class="header-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="user-menu">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-user"></i> Thông Tin</a></li>
+                        <li><a href="#"><i class="fa fa-heart"></i> Danh Sách</a></li>
+                        <li><a href="cart.html"><i class="fa fa-user"></i> Giỏ Hàng</a></li>
+                        <li><a href="checkout.html"><i class="fa fa-user"></i> Hóa Đơn</a></li>
+                        <li><a href="#"><i class="fa fa-user"></i> Tài Khoản</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="header-right">
+                    <ul class="list-unstyled list-inline">
+                        <li class="dropdown dropdown-small">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Đơn Vị :</span><span class="value">VND </span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">VND</a>
+                                </li>
+                                <li>
+                                    <a href="#">USD</a>
+                                </li>
+                                <li><a href="#">GBP</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-small">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">Ngôn Ngữ:</span><span class="value">Việt Nam </span><b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">VietNam</a></li>
+                                <li><a href="#">French</a></li>
+                                <li><a href="#">German</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End header area -->
+
+<div class="site-branding-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="logo">
+                    <h1>
+                        <a href="./"><img style="width:170px;height:110px;" src="assets/trangchu/img/logo.png"></a>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="shopping-item">
+                    <a href="cart.html">Giỏ Hàng - <span class="cart-amunt">VND</span> <i class="fa fa-shopping-cart"></i> <span class="product-count"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End site branding area -->
+
+<div class="mainmenu-area">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/home">Trang Chủ</a></li>
+                    <li><a href="shop.html">Mua Hàng</a></li>
+                    <li><a href="single-product.html">Sản Phẩm</a></li>
+                    <li><a href="cart.html">Giỏ Hàng</a></li>
+                    <li><a href="checkout.html">Thanh Toán</a></li>
+                    <li><a href="#">Danh Sách</a></li>
+                    <li><a href="#">Mục Khác</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End mainmenu area -->
+
+<div style="background: chocolate;" class="product-big-title-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product-bit-title text-center">
+                    <h2>Danh Sách Sản Phẩm</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End mainmenu area -->
+
+
+
+
+<div class="single-product-area">
+    <div class="zigzag-bottom"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6" *ngFor="let s of products| async">
+                <div class=" single-shop-product ">
+                    <div class="product-upper ">
+                        <img style="width: 210px;height: 160px;border:2px solid orange" src="assets/images/gallery/{{s.ProductImage}}" alt="">
+                    </div>
+                    <h2><a href="">{{s.ProductName}}</a></h2>
+                    <div class="product-carousel-price ">
+                        <ins>{{s.PromotionPrice|number}} VND</ins> <del>{{s.Price|number}} VND</del>
+                    </div>
+
+                    <div class="product-option-shop ">
+                        <a style="background:chocolate;" class="add_to_cart_button " data-quantity="1 " data-product_sku=" " data-product_id="70 " rel="nofollow " href="/canvas/shop/?add-to-cart=70 ">Mua Hàng</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div class="product-pagination text-center ">
+                    <nav>
+                        <ul class="pagination ">
+                            <li>
+                                <a href="# " aria-label="Previous ">
+                                    <span aria-hidden="true ">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="# ">1</a></li>
+                            <li><a href="# ">2</a></li>
+                            <li><a href="# ">3</a></li>
+                            <li><a href="# ">4</a></li>
+                            <li><a href="# ">5</a></li>
+                            <li>
+                                <a href="# " aria-label="Next ">
+                                    <span aria-hidden="true ">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="footer-top-area ">
+    <div class="zigzag-bottom "></div>
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-3 col-sm-6 ">
+                <div class="footer-about-us ">
+                    <h2>Rượu Ngoại</h2>
+                    <p>Chất Lượng – Uy Tín – Thương Hiệu là kim chỉ nam là định hướng cho Website của chúng tôi. Tạo dựng niềm tin, xây dựng thương hiệu để phát triển bền vững trên con đường kinh doanh cũng như phục vụ sự hài lòng của Khách Hàng.</p>
+                    <div class="footer-social ">
+                        <a href="# " target="_blank "><i class="fa fa-facebook "></i></a>
+                        <a href="# " target="_blank "><i class="fa fa-twitter "></i></a>
+                        <a href="# " target="_blank "><i class="fa fa-youtube "></i></a>
+                        <a href="# " target="_blank "><i class="fa fa-linkedin "></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 ">
+                <div class="footer-menu ">
+                    <h2 class="footer-wid-title ">Cài Đặt </h2>
+                    <ul>
+                        <li><a href="# ">Tài Khoản</a></li>
+                        <li><a href="# ">Lịch Sử</a></li>
+                        <li><a href="# ">Danh Sách</a></li>
+                        <li><a href="# ">Thông Tin</a></li>
+                        <li><a href="# ">Tin Tức</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 ">
+                <div class="footer-menu ">
+                    <h2 class="footer-wid-title ">Loại Sản Phẩm</h2>
+                    <ul>
+                        <li><a href="# ">Chivas</a></li>
+                        <li><a href="# ">Soju</a></li>
+                        <li><a href="# ">RedBull</a></li>
+                        <li><a href="# ">Voldka</a></li>
+                        <li><a href="# ">Gadets</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 ">
+                <div class="footer-newsletter ">
+                    <h2 class="footer-wid-title ">Tin Tức</h2>
+                    <p>Hãy đăng nhập và cập nhật thông tin cho chúng tôi</p>
+                    <div class="newsletter-form ">
+                        <form action="# ">
+                            <input type="email " placeholder="Type your email ">
+                            <input type="submit " value=" Gửi Đi ">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
